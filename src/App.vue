@@ -1,23 +1,43 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <router-link to="/">
+      <h1>Book Shop</h1>
+    </router-link>
+    <div class="container">
+      <div class="flex3">
+        <router-view></router-view>
+      </div>
+      <div class="flex1">
+        <cart></cart>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Cart from '@/components/Cart.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Cart
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+  display: flex;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex1 {
+  flex: 1;
 }
 </style>

@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "GONE(Ookbee Comics Studio)",
+      "imgUrl": "http://manga.ookbeecomics.com/5623/thumbnail-190x254-cut.png?v=1505819463000",
+      "category": "Thriller",
+      "author": "He Snow",
+      "description": "ในปราสาทแห่งนึงเกิดอะไรบางอย่างขึ้น?",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "title": "กาก",
+      "imgUrl": "http://manga.ookbeecomics.com/5703/thumbnail-190x254-cut.jpg?v=1505795545000",
+      "category": "Other",
+      "author": "หน้ากากตี๋",
+      "description": "ก า ร์ ตู น รั น ท ด ชี วิ ต  ข อ ง  ก ร า ฟ ฟิ ค สุ ด . . . ก า ก",
+      "price": 50
+    }
+  ]
+}
