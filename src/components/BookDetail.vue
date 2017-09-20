@@ -25,34 +25,27 @@ export default {
       bookError: null
     }
   },
-  beforeRouteEnter(to, from, next) {
-    fetchBook(to.params.id)
-      .then(book => {
-        next(vm => vm.book = book)
-      })
-      .catch(() => {
-        this.bookError = true
-        next()
-      })
+  created() {
+    this.loadBook()
   },
-  beforeRouteUpdate(to, from, next) {
-    this.book = null
-    this.bookError = null
-    fetchBook(to.params.id)
-      .then(book => {
-        this.book = book
-        next()
-      })
-      .catch(() => {
-        this.bookError = true
-        next()
-      })
+  watch: {
+    '$route': 'loadBook'
   },
   methods: {
+    loadBook() {
+      this.book = null
+      this.bookError = null
+      let id = this.$route.params.id
+      return fetchBook(this.$route.params.id).then(book => {
+        this.book = book
+      }).catch(() => {
+        this.bookError = true
+      })
+    },
     addToCard() {
       this.$store.commit('ADD_TO_CART', this.book)
     }
-  }
+  },
 }
 </script>
 
