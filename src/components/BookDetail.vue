@@ -10,7 +10,7 @@
       <button @click="addToCard">Add to cart</button>
     </div>
     <div v-if="bookError">
-      <h2>The Book you're looking for is not found</h2>
+      <h3>The Book you're looking for is not found</h3>
     </div>
   </div>
 </template>
