@@ -36,7 +36,7 @@ export default {
       this.book = null
       this.bookError = null
       let id = this.$route.params.id
-      return fetchBook(this.$route.params.id).then(book => {
+      return fetchBook(this.$route.params.id).then((book) => {
         this.book = book
       }).catch(() => {
         this.bookError = true
